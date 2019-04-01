@@ -20,7 +20,6 @@ public class PeliculaService {
 	private PeliculaRepository pelisRepo;
 
 	// Metodos:
-
 	public List<PeliculaDTO> getAll() {
 		ModelMapper mapper = new ModelMapper();
 		List<PeliculaDTO> peliculas = new ArrayList<>();
