@@ -1,5 +1,6 @@
 package BackEnd.backprueba1;
 
+import java.io.File;
 import java.io.Serializable;
 
 import javax.annotation.ManagedBean;
@@ -29,6 +30,7 @@ public class Pelicula implements Serializable {
 	private String nombre;
 	private String anio;
 	private long premios;
+	//private File pdf;
 	
 	
 	//Constructores:
