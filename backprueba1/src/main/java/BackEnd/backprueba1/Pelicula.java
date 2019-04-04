@@ -30,7 +30,6 @@ public class Pelicula implements Serializable {
 	private String nombre;
 	private String anio;
 	private long premios;
-	private File archivo;
 	
 	
 	//Constructores:
@@ -38,11 +37,10 @@ public class Pelicula implements Serializable {
 	protected Pelicula() {	
 	}
 	
-	public Pelicula(String nombre, String anio, long premios, File archivo) {
+	public Pelicula(String nombre, String anio, long premios) {
 		this.nombre=nombre;
 		this.anio=anio;
 		this.premios=premios;
-		this.archivo=archivo;
 	}
 	
 	//Metodos-Funciones:
@@ -80,13 +78,6 @@ public class Pelicula implements Serializable {
 		this.premios=premios;
 	}
 	
-	public File getArchivo() {
-		return this.archivo;
-	}
-	
-	public void setArchivo(File archivo) {
-		this.archivo=archivo;
-	}
 	
 	
 	@Override

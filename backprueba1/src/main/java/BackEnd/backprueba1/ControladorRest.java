@@ -44,8 +44,8 @@ public class ControladorRest {
 	
 	
 	 @GetMapping("Pelicula/busca")
-	public List<PeliculaDTO> buscar(@RequestParam("id") long id, @RequestParam("nombre") String nombre, @RequestParam("anio") String anio, @RequestParam("premios") long premios, @RequestParam("archivo") File archivo){
-		 List<PeliculaDTO> peliculas = peliServi.mejorBuscar(id, nombre, anio, premios, archivo);
+	public List<PeliculaDTO> buscar(@RequestParam("id") long id, @RequestParam("nombre") String nombre, @RequestParam("anio") String anio, @RequestParam("premios") long premios){
+		 List<PeliculaDTO> peliculas = peliServi.mejorBuscar(id, nombre, anio, premios);
 		 return peliculas;
 	 }
 	

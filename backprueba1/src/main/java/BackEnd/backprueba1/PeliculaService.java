@@ -52,10 +52,10 @@ public class PeliculaService {
 		return dto;
 	}
 	
-	public List<PeliculaDTO> mejorBuscar(long id, String nombre, String anio, long premios, File archivo) {
+	public List<PeliculaDTO> mejorBuscar(long id, String nombre, String anio, long premios) {
 		ModelMapper mapper = new ModelMapper();
 		List<Pelicula> peli = new ArrayList<>();
-		peli = pelisRepo.findByNombre(id, nombre, anio, premios,archivo);
+		peli = pelisRepo.findByNombre(id, nombre, anio, premios);
 		List<PeliculaDTO> pelis = new ArrayList<>();
 		for(Pelicula p:peli) {
 			pelis.add(mapper.map(p,PeliculaDTO.class));
