@@ -1,5 +1,6 @@
 package BackEnd.backprueba1;
 
+import java.io.File;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +44,8 @@ public class ControladorRest {
 	
 	
 	 @GetMapping("Pelicula/busca")
-	public List<PeliculaDTO> buscar(@RequestParam("id") long id, @RequestParam("nombre") String nombre, @RequestParam("anio") String anio, @RequestParam("premios") long premios){
-		 List<PeliculaDTO> peliculas = peliServi.mejorBuscar(id, nombre, anio, premios);
+	public List<PeliculaDTO> buscar(@RequestParam("id") long id, @RequestParam("nombre") String nombre, @RequestParam("anio") String anio, @RequestParam("premios") long premios, @RequestParam("archivo") File archivo){
+		 List<PeliculaDTO> peliculas = peliServi.mejorBuscar(id, nombre, anio, premios, archivo);
 		 return peliculas;
 	 }
 	

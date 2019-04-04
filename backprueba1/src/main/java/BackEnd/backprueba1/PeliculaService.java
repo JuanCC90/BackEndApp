@@ -1,5 +1,6 @@
 package BackEnd.backprueba1;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,10 +52,10 @@ public class PeliculaService {
 		return dto;
 	}
 	
-	public List<PeliculaDTO> mejorBuscar(long id, String nombre, String anio, long premios) {
+	public List<PeliculaDTO> mejorBuscar(long id, String nombre, String anio, long premios, File archivo) {
 		ModelMapper mapper = new ModelMapper();
 		List<Pelicula> peli = new ArrayList<>();
-		peli = pelisRepo.findByNombre(id, nombre, anio, premios);
+		peli = pelisRepo.findByNombre(id, nombre, anio, premios,archivo);
 		List<PeliculaDTO> pelis = new ArrayList<>();
 		for(Pelicula p:peli) {
 			pelis.add(mapper.map(p,PeliculaDTO.class));
