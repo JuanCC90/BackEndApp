@@ -30,6 +30,7 @@ public class Pelicula implements Serializable {
 	private String nombre;
 	private String anio;
 	private long premios;
+	/* aqui va el atributo pdf mirar tutorial hibernate*/
 	
 	
 	//Constructores:
