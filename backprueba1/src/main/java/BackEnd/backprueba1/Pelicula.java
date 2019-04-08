@@ -11,7 +11,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+
 
 @ManagedBean
 @SessionScoped
@@ -30,7 +34,9 @@ public class Pelicula implements Serializable {
 	private String nombre;
 	private String anio;
 	private long premios;
-	/* aqui va el atributo pdf mirar tutorial hibernate*/
+	@Lob
+	@Column(name = "archivo", columnDefinition="BLOB")
+	private byte[] archivo;
 	
 	
 	//Constructores:
@@ -38,10 +44,11 @@ public class Pelicula implements Serializable {
 	protected Pelicula() {	
 	}
 	
-	public Pelicula(String nombre, String anio, long premios) {
+	public Pelicula(String nombre, String anio, long premios, byte[] archivo) {
 		this.nombre=nombre;
 		this.anio=anio;
 		this.premios=premios;
+		this.archivo=archivo;
 	}
 	
 	//Metodos-Funciones:
@@ -79,6 +86,13 @@ public class Pelicula implements Serializable {
 		this.premios=premios;
 	}
 	
+	public void setArchivo(byte[] archivo) {
+		this.archivo=archivo;
+	}
+	
+	public byte[] getArchivo() {
+		return this.archivo;
+	}
 	
 	
 	@Override

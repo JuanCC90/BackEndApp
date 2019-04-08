@@ -1,6 +1,9 @@
 package BackEnd.backprueba1;
 
-import java.io.File;
+import java.nio.file.Files;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +13,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+
+
 
 import FrontEnd.frontprueba1.PeliculaDTO;
 
@@ -21,6 +27,7 @@ public class PeliculaService {
 	// Entorno:
 	@Autowired
 	private PeliculaRepository pelisRepo;
+	private String rutaArchivos = ".//src//main//resources//files//";
 
 	// Metodos:
 	public List<PeliculaDTO> getAll() {
@@ -75,7 +82,13 @@ public class PeliculaService {
 		pelisRepo.deleteById(id);		
 	}
 	
-	
+	public void guardaArchivo(MultipartFile file) throws IOException {
+		if(!file.isEmpty()) {
+			byte[] bytes = file.getBytes();
+			Path path = Paths.get(rutaArchivos + file.getOriginalFilename());
+			Files.write(path, bytes);
+		}
+	}
 	
 
 }
