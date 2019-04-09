@@ -69,7 +69,7 @@ public class ControladorRest {
 		
 	}
 	
-	@PostMapping("/Pelicula/Enviar")
+	@PostMapping("/Pelicula/Enviar/{archivo}")
 	public ResponseEntity<?> subirArchivo(@RequestParam("archivo") MultipartFile file){
 		if(file.isEmpty()) {
 			return new ResponseEntity <Object>("Seleccione un archivo", HttpStatus.OK);
