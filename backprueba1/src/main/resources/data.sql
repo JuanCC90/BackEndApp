@@ -32,7 +32,7 @@ insert into pelicula (nombre, anio, premios) values ('Aladin', '2019', '0');
 
 insert into pelicula (nombre, anio, premios) values ('Pesadillas Antes De Navidad', '1994', '1');
 
-insert into pelicula (nombre, anio, premios) values ('Los Odiosos Ocho', '2017', '1');
+insert into pelicula (nombre, anio, premios) values ('Django Desencadenado', '2017', '1');
 
 insert into pelicula (nombre, anio, premios) values ('Starship Troopers', '1995', '1');
 
