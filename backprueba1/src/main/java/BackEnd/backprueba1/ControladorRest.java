@@ -68,7 +68,7 @@ public class ControladorRest {
 		peliServi.borraPelicula(id);
 		
 	}
-	
+	/*
 	@PostMapping("/Pelicula/Enviar/{archivo}")
 	public ResponseEntity<?> subirArchivo(@RequestParam("archivo") MultipartFile file){
 		if(file.isEmpty()) {
@@ -84,7 +84,7 @@ public class ControladorRest {
 		return new ResponseEntity<Object> ("Archivo subido correctamente", HttpStatus.OK);
 	}
 	
-
+	*/
 	
 
 	

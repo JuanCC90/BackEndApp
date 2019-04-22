@@ -81,7 +81,7 @@ public class PeliculaService {
 	public void borraPelicula(long id) {
 		pelisRepo.deleteById(id);		
 	}
-	
+	/*
 	public void guardaArchivo(MultipartFile file) throws IOException {
 		if(!file.isEmpty()) {
 			byte[] bytes = file.getBytes();
@@ -89,7 +89,7 @@ public class PeliculaService {
 			Files.write(path, bytes);
 		}
 	}
-	
+	*/
 	
 	
 }
