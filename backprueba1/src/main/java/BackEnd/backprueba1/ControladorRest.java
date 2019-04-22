@@ -62,12 +62,11 @@ public class ControladorRest {
 	}
 	
 	
-	
 	@DeleteMapping("/Pelicula/Delete/{id}")		//Metodo para borrar elementos(Peliculas) por Id
 	public void borrarPelicula(@PathVariable long id){
-		peliServi.borraPelicula(id);
-		
+		peliServi.borraPelicula(id);	
 	}
+	
 	/*
 	@PostMapping("/Pelicula/Enviar/{archivo}")
 	public ResponseEntity<?> subirArchivo(@RequestParam("archivo") MultipartFile file){
